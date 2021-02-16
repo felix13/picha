@@ -1,0 +1,50 @@
+# simple app to demonstrate how django and digitalocean spaces work
+
+
+## Technology Stack
+
+- Python  3.5
+- Django == 2.2.13
+- Twitter Bootstrap 4
+
+
+
+## To Run Locally first comment out digitalocean credetials in settings file and uncomment static url and media url
+
+
+
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+python manage.py migrate
+```
+
+```bash
+python manage.py runserver
+```
+
+## To test DigitalOcean spaces 
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+python manage.py migrate
+```
+
+```bash
+python manage.py collectstatic
+```
+
+
+```bash
+python manage.py runserver
+```
+
+
+
+

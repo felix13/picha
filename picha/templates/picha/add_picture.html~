@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Upload picture {% endblock %}
+
+{% block content %}
+
+<div class="container"> 
+  {% if form.instance %}
+     <h1 class='text-center'>Edit picture</h1>
+  {% else %}
+     <h1 class='text-center'>Upload picture </h1>
+  {% endif %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <form action="" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+          {{ field.errors }}
+          {{ field.label_tag }}
+          {{ field }}
+        </div>
+        {% endfor %}
+        
+        <input type="submit" value="upload" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
